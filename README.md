@@ -52,3 +52,7 @@ the basic concepts and start rolling the ball..
 - docker-machine rm $(docker-machine ls -q) # Delete all VMs and their disk images
 - docker-machine scp docker-compose.yml myvm1:~     # Copy file to node's home dir
 - docker-machine ssh myvm1 "docker stack deploy -c <file> <app>"   # Deploy an app
+- docker-machine regenerate-certs [vm-name] ( sometimes after restart the vm box you might have to regenerate the certs)
+- docker-machine restart [vm-name]
+- docker-machine ls ( list all the vm )
+- docker-machine ssh myvm1 'docker swarm join-token worker' ( to get a token which is required to join as worker )
