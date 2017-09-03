@@ -3,7 +3,7 @@
 The purpose of creating this cheat sheet is to discuss the basic concepts of docker in a very short way so it is very easy for any one to collect 
 the basic concepts and start rolling the ball..
 
-- docker build -t friendlyname .  # Create image using this directory's Dockerfile
+- `docker build -t friendlyname . ` # Create image using this directory's Dockerfile
 - docker run -p 4000:80 friendlyname  # Run "friendlyname" mapping port 4000 to 80
 - docker run -d -p 4000:80 friendlyname         # Same thing, but in detached mode
 - docker exec -it [container-id] bash                  # Enter a running container
@@ -20,6 +20,8 @@ the basic concepts and start rolling the ball..
 - docker tag <image> username/repository:tag  # Tag <image> for upload to registry
 - docker push username/repository:tag            # Upload tagged image to registry
 - docker run username/repository:tag                   # Run image from a registry
+- `docker tag <image-hash> <docker-repo>:tag-name # Create a tag
+
 
 ## Docker Componse Cheat sheet
 
