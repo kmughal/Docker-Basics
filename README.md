@@ -58,3 +58,16 @@ the basic concepts and start rolling the ball..
 - docker-machine restart [vm-name]
 - docker-machine ls ( list all the vm )
 - docker-machine ssh myvm1 'docker swarm join-token worker' ( to get a token which is required to join as worker )
+
+
+## Delete all containers & images
+ run below commands :
+ 
+ ```
+  #!/bin/bash
+# Delete all containers
+docker rm $(docker ps -a -q)
+# Delete all images
+docker rmi $(docker images -q)
+
+ ```
